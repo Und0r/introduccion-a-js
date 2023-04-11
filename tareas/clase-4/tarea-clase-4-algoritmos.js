@@ -7,21 +7,56 @@ usando  elementos de programación simples y clásicos.
 
 /*
 Desafío de programación #1: Imprimí los números del 1 al 10
-
+*/
+// let contador = 1;
+// while (contador < 11){
+//   console.log(contador);
+//   contador++;
+// }
+/*
  Resultado: 10 9 8 7 6 5 4 3 2 1
 
  Desafìo de programación  #2: Imprimí los números impares del 1 al 100
 
+ */
+//  for(let i = 1; i < 101; i++){
+//   if(i % 2 !== 0){
+//     console.log(i);
+//   }
+//  }
+/*
  1 3 5 ... 99
 
 Desafío de programación #3: Imprimí la tabla de multiplicación del 7
-
+*/
+// let tabla = 7;
+// for(let i = 0; i < 10; i++){
+//   console.log(`${tabla}x${i} = ${tabla * i}`);
+// }
+/*
  7x0 = 0
  7x1 = 7
  ...
  7x9 = 63
 
 Desafío de programación #4: Imprimí todas las tablas de multiplicación del 1 al 9
+*/
+// let numeroTabla = 0;
+// for(let i = 0; i < 11; i++){
+  
+//   if(i === 10){
+//     i = -1;
+//     numeroTabla++
+//   } else if(numeroTabla === 10){
+//       i = 10;
+//   } else {
+//     console.log(`${numeroTabla}x${i} = ${numeroTabla * i}`);
+  
+//   }
+   
+// }
+
+/*
 
  1x0 = 0
  ...
@@ -35,13 +70,32 @@ Desafío de programación #4: Imprimí todas las tablas de multiplicación del 1
 
 Desafío de programación #5: Calcula el resultado de la suma de los numeros del 1 al 10 en un array.
  [1,2,3,4,5,6,7,8,9,10]
+ */
 
+ let array = [1,2,3,4,5,6,7,8,9,10];
+ let suma = 0;
+ for(let i = 0; i < 11; i++){
+   
+    if(i === 10) {
+      console.log(suma);
+    } else {
+      suma += array[i];
+    }
+ }
+
+/*
  1 + 2 + 3 + ... + 10 = ? //hacerlo con un array y un bucle
 
 Desafío de programación #6: Calcula 10! (10 factorial)
 
  10 * 9 * 8 * ... * 1
+ */
+let factorial = 0;
+for(let i = 10; i > 0; i--){
+    
+}
 
+ /*
 Desafío de programación #7: Calcula la suma de todos los números impares mayores que 10 y menores que 30
 
 Desafío de programación #8: Crea una función que convierta de Celsius a Fahrenheit

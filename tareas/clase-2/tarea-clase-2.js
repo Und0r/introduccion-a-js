@@ -27,18 +27,12 @@ function restar(numero1, numero2) {
 }
 
 const operador = prompt('Ingrese + o -');
-const numero1 = 1;
-const numero2 = 2;
+const numeroA = 1;
+const numeroB = 2;
 
-let resultado;
+
 if (operador === '+') {
-    resultado = sumar(numero1, numero2);
+    console.log('La suma entre ' + numeroA + ' y ' + numeroB + ' es igual a ' + sumar(numeroA, numeroB));
 } else {
-    resultado = restar(numero1, numero2);
+    console.log('La resta entre ' + numeroA + ' y ' + numeroB + ' es igual a ' + restar(numeroA, numeroB));
 }
-
-//https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/template_strings
-console.log(
-    `El resultado de ${numero1} ${operador} ${numero2} es ${resultado}`
-);
-

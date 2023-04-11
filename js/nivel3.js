@@ -125,7 +125,10 @@
 //       Utilizá console.log para ver lo que obtuviste!
 
 
-
+const nuestroTitulo = document.querySelector('h1');
+console.log(nuestroTitulo);
+console.log(nuestroTitulo.innerText);
+nuestroTitulo.innerText = 'Skereeeeee';
 
 
 
@@ -146,13 +149,16 @@
 
 // TAREA: Obtené todos los elementos <li> de la página en una variable llamada mediaLinks.
 
-
-
-
+const mediaLinks = document.querySelectorAll('li');
 
 
 // TAREA: Ahora utilizá console.log para ver la cantidad de 
 // elementos li que hay con mediaLinks.length
+
+
+
+console.log(mediaLinks);
+
 
 
 
@@ -163,7 +169,9 @@
 //      sobre cada item de mediaLinks y mostralos en pantalla con console.log
 
 
-
+for(let i = 0; i < mediaLinks.length; i++){
+    console.log(mediaLinks[i].innerText);
+}
 
 
 
@@ -185,7 +193,9 @@
 // y utilizá console.log para mostrarlo.
 
 
+const $titulo = document.querySelector('h1');
 
+console.log($titulo.textContent);
 
 
 
@@ -206,6 +216,7 @@
 // TAREA: Hagamos un nuevo título! Cambiá el contenido de nuestro 'h1' y ponele lo que quieras.
 
 
+$titulo.textContent = 'Hola que onda pa?';
 
 
 
@@ -223,7 +234,8 @@
 
 // TAREA: Actualizá el valor del atributo 'src' de nuestra etiqueta 'img' a "img/kittens.jpeg".
 
-
+const $img = document.querySelector('img');
+$img.src = 'img/kittens.jpeg';
 
 
 
@@ -249,7 +261,7 @@
 // Tarea: Obtené cualquier elemento de la página y cambiale algunos estilos.
 
 
-
+$titulo.style.color = 'red';
 
 
 
@@ -279,7 +291,14 @@
 // P.S. También les podés dar estilos al nuevo nodo que creaste.
 
 
+const nuevoNodo = document.createElement('img');
+nuevoNodo.src = 'img/woman_bw.jpg';
+const nuevoParrafo = document.createElement('p');
+const textoNuevoNodo = document.createTextNode('Amo la programacion!');
 
+nuevoParrafo.appendChild(textoNuevoNodo);
+$titulo.appendChild(nuevoNodo);
+$titulo.appendChild(nuevoParrafo);
 
 
 

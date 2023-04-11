@@ -44,6 +44,7 @@
 
 
 
+const comidasFavoritas = ['milanesa', 'papas', 'fideos', 'vegan burguer'];
 
 
 
@@ -64,7 +65,7 @@
 // TAREA: Verifique cuántos valores tiene en su array comidasFavoritas.
 // imprimi utilizando console.log el resultado.
 
-
+// console.log(comidasFavoritas.length);
 
 
 
@@ -92,7 +93,7 @@
 
 
 
-
+// console.log(comidasFavoritas[2]);
 
 
 /*
@@ -115,7 +116,8 @@
 // TAREA: Toma tu array de comidasFavoritas y reemplaza el primer valor
 // con cualquier otra cosa.
 
-
+// console.log(comidasFavoritas);
+// comidasFavoritas[0] = 'pizza';
 
 
 
@@ -123,6 +125,7 @@
 // TAREA: console.log todo el array para verificar.
 
 
+// console.log(comidasFavoritas);
 
 
 
@@ -147,7 +150,7 @@
 // TAREA: Extendamos tu lista de comidasFavoritas y agreguemos un valor más.
 
 
-
+// comidasFavoritas.push('helado');
 
 
 
@@ -155,7 +158,7 @@
 
 
 
-
+// console.log(comidasFavoritas);
 
 
 /*
@@ -182,8 +185,10 @@
 // TAREA: Intenta crear un array como una constante y modifica los valores que contiene.
 
 
-
-
+// const arrayConstante = [2, 3, 4, 6];
+// console.log(arrayConstante);
+// arrayConstante.push(1);
+// console.log(arrayConstante);
 
 
 
@@ -296,7 +301,18 @@
 
 // TAREA: Probalo con tu comidasFavoritas array.
 
+for(let i = 0; i < comidasFavoritas.length; i++){
+    console.log(`Mi comida favorita es ${comidasFavoritas[i]}`);
+}
 
+//Ejemplo de clase
+
+const notaParciales = [10, 4, 5, 6];
+let totalNotas = 0;
+for(let i=0; i < notaParciales.length; i++){
+    totalNotas += notaParciales[i];
+}
+console.log(`El promedio es ${totalNotas / notaParciales.length}`);
 
 
 

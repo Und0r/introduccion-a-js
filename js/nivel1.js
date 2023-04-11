@@ -19,8 +19,8 @@
 
     Cuando estás escribiendo código que querés que la máquina ejecute, ponelos AFUERA de los bloques de comentario.
 */
-
-
+//alert('Hola Mundo!');
+//console.log('Hola Mundo!');
 /*
     Mostrando texto
     ===============
@@ -40,21 +40,19 @@
 
 // Tarea: Ahora te toca a vos! Acá abajo escribí una alerta que diga "Hola mundo!"
 
+//alert('Undor');
 
 // Tarea: Una vez que la alerta funcione, comentala poniendo '//' en la línea donde está el código y guardá los cambios.
 // Una vez que recargás la página, ya no debería aparecer más.
 
-
 // Tarea: Ahora probá hacer un console.log de un mensaje que queramos.
 
-
+//console.log('Undorr');
 // Consejo: Para recargar el navegador podemos apretar 'CMD + R' en Mac y 'CTRL + R' en
 //      Windows.
 
-
 // Consejo: El atajo del teclado para guardar cambios a un archivo es 'CMD + S' en Mac y 'CTRL + S' en
 //      Windows.
-
 
 /*
     Variables
@@ -69,8 +67,9 @@
     JavaScript le llama a estos valores indefinidos 'undefined'.
 
     Si imprimimos la variable en la consola, podemos verlo.
-    console.log("nombreDeVariable es " + nombreDeVariable);
-
+    */
+//  console.log("nombreDeVariable es " + nombreDeVariable);
+/*
     El resultado va a ser "nombreDeVariable es undefined".
 
     Para darle un valor a nuestra variable (o mejor dicho ASIGNAR un valor), usamos el signo '='.
@@ -102,6 +101,8 @@
 
 // TAREA: Creá 2 variables indefinidas, llamadas numeroUno y numeroDos.
 
+//let numeroUno
+//let numeroDos
 
 /*
     Podés usar el nombre de tus variables pare representar qué información tienen adentro, por ejemplo:
@@ -115,17 +116,20 @@
 // Crear 2 variables nuevas, una con tu nombre, la segunda con tu edad. Dales un nombre apropriado y
 // mostralas con un alert.
 
+let nombre = 'Alejandro';
+let edad = 26;
+
+//alert(nombre + ' ' + edad);
 
 // Consejo: para mostrar 2 variables de texto al mismo tiempo, las podés unir usando el signo '+'. Ejemplo:
 
 /*
-* let nombre = 'Fabricio'
-* let apellido = 'Sodano'
-*
-* alert(nombre + apellido)
-*
-* */
-
+ * let nombre = 'Fabricio'
+ * let apellido = 'Sodano'
+ *
+ * alert(nombre + apellido)
+ *
+ * */
 
 /*
     Constantes
@@ -150,9 +154,12 @@
 
 // TAREA: Crear una constante y mostrarla con un alert
 
+const IVA = 21;
+//alert(IVA);
 
 // TAREA: Intentar asignar un valor a una constante y ver qué pasa (mirar la consola)
 
+//IVA = 20;
 
 // Consejo: No te olvides de comentar (//) los alerts y los errores intencionales (como en la tarea anterior) para
 // que los alerts no aparezcan cada vez, y para que los errores no hagan que el programa se detenga.
@@ -183,6 +190,10 @@
 // la 1ra variable multiplicada (con el operador *) por la 2nda variable.
 // Mostrar el valor de resultadoMultiplicacion con un alert o un console.log
 
+let diez = 10;
+let tres = 3;
+let resultadoMultiplicacion = diez * tres;
+//console.log(resultadoMultiplicacion);
 
 /*
     Funciones
@@ -232,23 +243,36 @@
          }
 */
 
+function duplicar(numero) {
+  return numero * 2;
+}
+//console.log(duplicar(10));
 // TAREA: Es tu turno de crear una función!
 
 // Creá una función llamada 'sumar'
 // Escribí código para que acepte 2 argumentos (numero1 y numero2)
 // Escribí código para que devuelva (return) la suma de numero1 y numero2
 // Ejecutá la función sumar y mostrá su resultado en la consola
-
+function sumar(numero1, numero2) {
+  return numero1 + numero2;
+}
+//console.log(sumar(2,3));
 
 // TAREA: Ahora creemos otra función llamada 'restar'
 //       Que acepte 2 números como parámetro y los reste, y que devuelva ese valor.
 // Ejecutá la función con los números 5 y 1 y mostralos con console.log
-
+function restar(numero1, numero2) {
+  return numero1 - numero2;
+}
+console.log(restar(5, 1));
 
 // Consejo: Sabías que en vez de pasar los números directamente a tu función podés crear variables con esos números
 // y pasarlos como parámetros? Probalo!
 
+let numeroUno = 2;
+let numeroDos = 4;
 // Consejo: Dejá las funciones como están, no las comentes, las vamos a usar de nuevo.
+console.log(restar(numeroUno, numeroDos));
 
 /*
     Condicionales If-Else
@@ -325,10 +349,18 @@
 // Si no, tenemos que llamar la función 'restar', con nuestros números (las variables del paso 2).
 //
 // No se olviden de hacer un console.log para ver el resultado!
-//
 
 // TAREA: Cambiar el operador a '-', y fijarse que llame a la función 'restar' en vez de a la de 'sumar'.
 
+// let operador = "+";
+// let numeroA = 23;
+// let numeroB = 12;
+
+// if(operador === "+"){
+//     console.log(sumar(numeroA, numeroB));
+// }else {
+//     console.log(restar(numeroA, numeroB));
+// }
 
 /*
     'If' - 'Else if' - 'Else'
@@ -360,9 +392,13 @@
 
 // TAREA: Creemos 2 funciones más: dividir y multiplicar.
 
+function dividir(numero1, numero2) {
+  return numero1 / numero2;
+}
 
-
-
+function multiplicar(numero1, numero2) {
+  return numero1 * numero2;
+}
 
 // TAREA: Reescribamos el if-else que teníamos y extendámolos, agregando:
 //       'else if' el 'operador' es igual a '-' - llamar a la función 'restar'
@@ -370,9 +406,27 @@
 //       'else if' el 'operador' es igual a '*' - llamar a la función 'multiplicar'.
 //       else console.log - "Perdón, no conozco ese operador".
 
+const operador = prompt('Ingrese operador (+,-,*,/');
+const numero1 = 10;
+const numero2 = 2;
 
+let resultado;
 
+if (operador === '+') {
+  resultado = sumar(numero1, numero2);
+} else if (operador === '-') {
+  resultado = restar(numero1, numero2);
+} else if (operador === '/') {
+  resultado = dividir(numero1, numero2);
+} else if (operador === '*') {
+  resultado = multiplicar(numero1, numero2);
+} else {
+  console.log(`No entiendo el operador ${operador}`);
+}
 
+console.log(
+  `El resultado de ${numero1} ${operador} ${numero2} es ${resultado}`
+);
 
 /*
     Operadores Booleanos
@@ -397,10 +451,12 @@
     let maradonaMejorQuePele = true;
 */
 
-
 // TAREA: usando el operador !, Intentá invertir una variable (de true a false, o de false a true) e imprimí el
 // resultado en la consola.
 
+const bool = (1 === 0);
+console.log(bool);
+console.log(!bool);
 
 ////////////////////////////////////////////////////////////////////////////
 // Felicitaciones! Terminaste el Nivel 1 de la introducción a JavaScript! //
