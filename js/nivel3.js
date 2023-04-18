@@ -297,7 +297,7 @@ const nuevoParrafo = document.createElement('p');
 const textoNuevoNodo = document.createTextNode('Amo la programacion!');
 
 nuevoParrafo.appendChild(textoNuevoNodo);
-$titulo.appendChild(nuevoNodo);
+document.querySelector('header').appendChild(nuevoNodo);
 $titulo.appendChild(nuevoParrafo);
 
 
