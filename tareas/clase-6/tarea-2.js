@@ -15,6 +15,7 @@ document.querySelector('#quitar-integrante').onclick = function (event) {
 };
 
 document.querySelector('#boton-calculo').onclick = function () {
+  borrarResultados();
   calcularSalarios();
   mostrarResultados();
 };
@@ -24,9 +25,10 @@ function crearInput() {
   const $div = document.createElement('div');
   $div.id = 'input-salario';
   const $label = document.createElement('label');
-  $label.textContent = 'Salario integrante ';
+  $label.textContent = 'Salario anual integrante ';
   const $input = document.createElement('input');
   $input.type = 'number';
+  $input.min = '0';
 
   $label.appendChild($input);
   $div.appendChild($label);
@@ -39,6 +41,21 @@ function borrarInput() {
     $divInputs[$divInputs.length - 1].remove();
   }
 }
+
+function borrarResultados() {
+  const $mayorSalarioAnual = document.querySelector('#salario-anual-max');
+  const $menorSalarioAnual = document.querySelector('#salario-anual-min');
+  const $salarioAnualProm = document.querySelector('#salario-anual-prom');
+  const $salarioMensualProm = document.querySelector('#salario-mensual-prom');
+
+  $mayorSalarioAnual.textContent = '';
+  $menorSalarioAnual.textContent = '';
+  $salarioAnualProm.textContent = '';
+  $salarioMensualProm.textContent = '';
+  
+}
+
+
 
 function mostrarBotonCalculo() {
   document.querySelector('#boton-calculo').className = '';
@@ -58,22 +75,15 @@ function ocultarResultados() {
 
 function calcularSalarios() {
   const salarios = obtenerSalarios();
-  const $divResultados = document.querySelector('#resultados');
+  const $mayorSalarioAnual = document.querySelector('#salario-anual-max');
+  const $menorSalarioAnual = document.querySelector('#salario-anual-min');
+  const $salarioAnualProm = document.querySelector('#salario-anual-prom');
+  const $salarioMensualProm = document.querySelector('#salario-mensual-prom');
 
-
-  const textoMayorSalarioAnual = document.createElement('div');
-  textoMayorSalarioAnual.textContent = 'El mayor salario anual es ' + calcularMayorSalarioAnual(salarios);
-  const textoMenorSalarioAnual = document.createElement('div');
-  textoMenorSalarioAnual.textContent = 'El menor salario anual es ' + calcularMenorSalarioAnual(salarios);
-  const textoPromedioAnual = document.createElement('div');
-  textoPromedioAnual.textContent = 'El salario anual promedio es ' + calcularSalarioAnualPromedio(salarios);
-  const textoPromedioMensual = document.createElement('div');
-  textoPromedioMensual.textContent = 'El salario mensual promedio es ' + calcularSalarioMensualPromedio(salarios);
-
-  $divResultados.appendChild(textoMayorSalarioAnual);
-  $divResultados.appendChild(textoMenorSalarioAnual);
-  $divResultados.appendChild(textoPromedioAnual);
-  $divResultados.appendChild(textoPromedioMensual);
+  $mayorSalarioAnual.textContent = 'El mayor salario anual es ' + calcularMayorSalarioAnual(salarios);
+  $menorSalarioAnual.textContent = 'El menor salario anual es ' + calcularMenorSalarioAnual(salarios);
+  $salarioAnualProm.textContent = 'El salario anual promedio es ' + calcularSalarioAnualPromedio(salarios);
+  $salarioMensualProm.textContent = 'El salario mensual promedio es ' + calcularSalarioMensualPromedio(salarios);
 }
 
 function obtenerSalarios() {

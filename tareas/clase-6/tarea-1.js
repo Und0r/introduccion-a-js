@@ -50,6 +50,7 @@ function crearIntegrantes(cantidadIntegrantes) {
     $label.textContent = `Edad Integrante #${i + 1}`;
     const $input = document.createElement('input');
     $input.type = 'number';
+    $input.min = '0';
 
     $div.appendChild($label);
     $div.appendChild($input);
@@ -88,7 +89,7 @@ function ocultarBotonReset() {
 }
 
 function mostrarEdad(tipo, valor) {
-  document.querySelector(`#${tipo}-edad`).textContent = valor;
+  document.querySelector(`#${tipo}-edad`).textContent = `La edad ${tipo} es: ${valor}`;
 }
 
 function obtenerEdades() {
@@ -96,8 +97,11 @@ function obtenerEdades() {
   edades = [];
 
   for (let i = 0; i < $edadesIntegrantes.length; i++) {
+    if(Number($edadesIntegrantes[i].value) > 0){
     edades.push(Number($edadesIntegrantes[i].value));
   }
+  }
+
 
   return edades;
 }
