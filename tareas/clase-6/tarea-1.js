@@ -51,6 +51,7 @@ function crearIntegrantes(cantidadIntegrantes) {
     const $input = document.createElement('input');
     $input.type = 'number';
     $input.min = '0';
+    $input.name = 'edad-integrante'
 
     $div.appendChild($label);
     $div.appendChild($input);
@@ -137,3 +138,33 @@ function calcularPromedio(edadIntegrantes) {
 
   return (suma / edadIntegrantes.length).toFixed(2);
 }
+
+//Tarea extra clase 7
+const $form = document.querySelector('#grupo-familiar');
+const $cantidadIntegrantes = $form['cantidad-familiares'].value
+
+
+
+
+function validarInputIntegrante(input){
+  if(input.length === 0){
+      return 'Este campo debe tener al menos 1 caracter';
+  }
+  if (input.length >= 3){
+      return 'Este campo debe tener menos de 3 caracteres';
+  }
+  return '';
+}
+
+
+
+function validarEdadIntegrante(inputEdad){
+  if(inputEdad.length === 0){
+    return 'Este campo debe tener al menos 1 caracter';
+}
+if (inputEdad.length >= 3){
+    return 'Este campo debe tener menos de 3 caracteres'
+}
+return '';
+}
+
