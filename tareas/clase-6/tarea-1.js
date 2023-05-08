@@ -51,7 +51,6 @@ function crearIntegrantes(cantidadIntegrantes) {
     const $input = document.createElement('input');
     $input.type = 'number';
     $input.min = '0';
-    $input.name = 'edad-integrante'
 
     $div.appendChild($label);
     $div.appendChild($input);
