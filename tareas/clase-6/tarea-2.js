@@ -157,3 +157,18 @@ function convertirSalariosAnualesEnMensuales(salarios) {
 
   return salariosMensuales;
 }
+
+
+// Pruebas para la tarea extra de la clase 7
+
+function validarSalarioIntegrante(inputSalario){
+    if(inputSalario.length === 0) {
+      return 'Este campo debe tener al menos 1 caracter';
+    }
+
+    if(inputSalario.length >= 20) {
+      return 'Este campo debe tener menos de 20 caracteres'
+    }
+
+    return '';
+}

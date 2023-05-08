@@ -23,3 +23,4 @@ function probarValidarInputIntegrantes() {
   }
 probarValidarInputIntegrantes();
 probarValidarEdadIntegrante();
+
