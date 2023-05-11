@@ -164,11 +164,9 @@ function convertirSalariosAnualesEnMensuales(salarios) {
 function validarSalarioIntegrante(inputSalario){
     if(inputSalario.length === 0) {
       return 'Este campo debe tener al menos 1 caracter';
-    }
-
-    if(inputSalario.length >= 20) {
+    } else if(inputSalario.length >= 20) {
       return 'Este campo debe tener menos de 20 caracteres'
-    }
-
+    } else {
     return '';
+    }
 }

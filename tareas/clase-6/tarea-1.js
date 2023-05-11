@@ -148,11 +148,11 @@ const $cantidadIntegrantes = $form['cantidad-familiares'].value
 function validarInputIntegrante(input){
   if(input.length === 0){
       return 'Este campo debe tener al menos 1 caracter';
-  }
-  if (input.length >= 3){
+  }else if (input.length >= 3){
       return 'Este campo debe tener menos de 3 caracteres';
-  }
+  } else {
   return '';
+}
 }
 
 
@@ -160,10 +160,10 @@ function validarInputIntegrante(input){
 function validarEdadIntegrante(inputEdad){
   if(inputEdad.length === 0){
     return 'Este campo debe tener al menos 1 caracter';
-}
-if (inputEdad.length >= 3){
+}else if (inputEdad.length >= 3){
     return 'Este campo debe tener menos de 3 caracteres'
-}
+} else {
 return '';
+}
 }
 
